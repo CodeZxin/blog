@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: 主页
 type: docs
 ---
 
