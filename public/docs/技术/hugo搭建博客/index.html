@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
@@ -20,8 +20,8 @@
 
 
 创建新站点。
-hugo new site myblog
-cd myblog
+hugo new site &lt;name&gt;
+cd &lt;name&gt;
 
 
 安装主题hugo-book
@@ -43,32 +43,84 @@ hugo server
 
 
 
-  写笔记
+  使用说明
   #
 
-在content/docs中使用目录的方式组织结构，在相应目录下的_index.md编写内容。">
+
+
+在content/docs下使用markdown编写文章
+
+
+目录结构对应了页面里的大纲结构，目录下只有创建_index.md才能被大纲识别
+
+
+_index.md中可以设置目录属性（开头敲---回车），正文是目录对应的页面。
+
+
+常用属性：
+
+
+bookFlatSection: true目录不缩进
+
+
+bookCollapseSection: true目录收起
+
+
+bookHidden: true隐藏页面
+
+
+title目录命名
+
+
+weight目录排序
+
+
+
+  部署网站
+  #
+
+
+创建Github仓库，将项目同步到仓库
+
+git init
+git add .
+git commit -m &lt;message&gt;
+git remote add &lt;name&gt; &lt;url&gt;
+git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;
+
+使用Netlify托管仓库，每次仓库更新，网站会同步更新。
+">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
   <meta property="og:site_name" content="小鑫的笔记">
   <meta property="og:title" content="小鑫的笔记">
   <meta property="og:description" content="Hugo搭建博客 # 安装步骤 # 下载hugo_extended_0.140.2_windows-amd64.zip，解压得到Hugo.exe
 将Hugo.exe所在目录加入到环境变量
 创建新站点。
-hugo new site myblog cd myblog 安装主题hugo-book
+hugo new site &lt;name&gt; cd &lt;name&gt; 安装主题hugo-book
 git clone https://github.com/alex-shpak/hugo-book.git themes/hugo-book 修改配置文件hogo.toml
 baseURL = &#39;网址&#39; languageCode = &#39;zh&#39; title = &#39;站名&#39; theme = &#39;hugo-book&#39; [params] BookTheme = &#39;dark&#39; 启动服务
-hugo server 写笔记 # 在content/docs中使用目录的方式组织结构，在相应目录下的_index.md编写内容。">
+hugo server 使用说明 # 在content/docs下使用markdown编写文章
+目录结构对应了页面里的大纲结构，目录下只有创建_index.md才能被大纲识别
+_index.md中可以设置目录属性（开头敲---回车），正文是目录对应的页面。
+常用属性：
+bookFlatSection: true目录不缩进
+bookCollapseSection: true目录收起
+bookHidden: true隐藏页面
+title目录命名
+weight目录排序
+部署网站 # 创建Github仓库，将项目同步到仓库 git init git add . git commit -m &lt;message&gt; git remote add &lt;name&gt; &lt;url&gt; git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt; 使用Netlify托管仓库，每次仓库更新，网站会同步更新。">
   <meta property="og:locale" content="zh">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
 <title>Hugo搭建博客 | 小鑫的笔记</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="http://localhost:1313/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
 <link rel="stylesheet" href="/book.min.2d7fec8e866046a7460a1cc86027535586803606a87c87da3098bcd8d5a2b62d.css" integrity="sha256-LX/sjoZgRqdGChzIYCdTVYaANgaofIfaMJi82NWiti0=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3bc400e1d4483ea503000188b2dfbeac1deb9cab004d2242c2a7587ceeb226ef.js" integrity="sha256-O8QA4dRIPqUDAAGIst&#43;&#43;rB3rnKsATSJCwqdYfO6yJu8=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.xml" title="小鑫的笔记" />
+  <script defer src="/en.search.min.c509575b0170b78c9d8b74f0c779a7b7e670cab760c16a45735aed1e008665a0.js" integrity="sha256-xQlXWwFwt4ydi3Twx3mnt&#43;ZwyrdgwWpFc1rtHgCGZaA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -120,11 +172,55 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="active">Hugo搭建博客</a>
+    <span>学习</span>
   
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/%E5%AD%A6%E4%B9%A0/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" class="">资源汇总</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>技术</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/%E6%8A%80%E6%9C%AF/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="active">Hugo搭建博客</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -140,6 +236,18 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
 
 
 
@@ -183,7 +291,8 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#安装步骤">安装步骤</a></li>
-    <li><a href="#写笔记">写笔记</a></li>
+    <li><a href="#使用说明">使用说明</a></li>
+    <li><a href="#部署网站">部署网站</a></li>
   </ul>
 </nav>
 
@@ -213,8 +322,8 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li>
 <p>创建新站点。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site myblog
-</span></span><span style="display:flex;"><span>cd myblog
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site &lt;name&gt;
+</span></span><span style="display:flex;"><span>cd &lt;name&gt;
 </span></span></code></pre></div></li>
 <li>
 <p>安装主题<code>hugo-book</code></p>
@@ -235,11 +344,54 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div></li>
 </ol>
-<h2 id="写笔记">
-  写笔记
-  <a class="anchor" href="#%e5%86%99%e7%ac%94%e8%ae%b0">#</a>
+<h2 id="使用说明">
+  使用说明
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e">#</a>
 </h2>
-<p>在content/docs中使用目录的方式组织结构，在相应目录下的<code>_index.md</code>编写内容。</p>
+<ul>
+<li>
+<p>在<code>content/docs</code>下使用<code>markdown</code>编写文章</p>
+</li>
+<li>
+<p>目录结构对应了页面里的大纲结构，目录下只有创建<code>_index.md</code>才能被大纲识别</p>
+</li>
+<li>
+<p><code>_index.md</code>中可以设置目录属性（开头敲<code>---</code>回车），正文是目录对应的页面。</p>
+</li>
+</ul>
+<p><strong>常用属性：</strong></p>
+<ul>
+<li>
+<p><code>bookFlatSection: true</code>目录不缩进</p>
+</li>
+<li>
+<p><code>bookCollapseSection: true</code>目录收起</p>
+</li>
+<li>
+<p><code>bookHidden: true</code>隐藏页面</p>
+</li>
+<li>
+<p><code>title</code>目录命名</p>
+</li>
+<li>
+<p><code>weight</code>目录排序</p>
+</li>
+</ul>
+<h2 id="部署网站">
+  部署网站
+  <a class="anchor" href="#%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99">#</a>
+</h2>
+<ol>
+<li>创建Github仓库，将项目同步到仓库</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m &lt;message&gt;
+</span></span><span style="display:flex;"><span>git remote add &lt;name&gt; &lt;url&gt;
+</span></span><span style="display:flex;"><span>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;
+</span></span></code></pre></div><ol start="2">
+<li>使用Netlify托管仓库，每次仓库更新，网站会同步更新。</li>
+</ol>
 </article>
  
       
@@ -282,7 +434,8 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#安装步骤">安装步骤</a></li>
-    <li><a href="#写笔记">写笔记</a></li>
+    <li><a href="#使用说明">使用说明</a></li>
+    <li><a href="#部署网站">部署网站</a></li>
   </ul>
 </nav>
 
